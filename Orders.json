@@ -1,0 +1,70 @@
+[
+  {
+    "oid":"001",
+    "Customer Name":"Peter Lustig",
+    "Customer Address":"Steindamm 80",
+    "Item Name":"Macbook",
+    "Price":"1700",
+    "Currency":"EUR"
+  },
+  {
+    "oid":"002",
+    "Customer Name":"John Smith",
+    "Customer Address":"Reeperbahn 153",
+    "Item Name":"Macbook",
+    "Price":"1700",
+    "Currency":"EUR"
+  },
+  {
+    "oid":"003",
+    "Customer Name":"Ted Justice",
+    "Customer Address":"Lagerstrasse 11",
+    "Item Name":"Book 'Guide to Hamburg'",
+    "Price":"20",
+    "Currency":"EUR"
+  },
+  {
+    "oid":"004",
+    "Customer Name":"Peter Lustig",
+    "Customer Address":"Steindamm 80",
+    "Item Name":"Book 'Cooking 101' ",
+    "Price":"10",
+    "Currency":"EUR"
+  },
+  {
+    "oid":"005",
+    "Customer Name":"Peter Lustig",
+    "Customer Address":"Steindamm 80",
+    "Item Name":"Inline Skates",
+    "Price":"75",
+    "Currency":"EUR"
+  },
+  {
+    "oid":"006",
+    "Customer Name":"Ted Justice",
+    "Customer Address":"Laggerstrasse 11",
+    "Item Name":"Playstation 4",
+    "Price":"270",
+    "Currency":"EUR"
+  },
+  {
+    "oid":"007",
+    "Customer Name":"John Smith",
+    "Customer Address":"Reeperbahn 153",
+    "Item Name":"Flux compensator",
+    "Price":"2000",
+    "Currency":"USD"
+  },
+  {
+    "oid":"008",
+    "Customer Name":"Peter Lustig",
+    "Customer Address":"Steindamm 80",
+    "Item Name":"Inline Skates",
+    "Price":"75",
+    "Currency":"EUR"
+  }
+
+
+
+
+]
