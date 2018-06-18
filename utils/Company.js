@@ -9,10 +9,6 @@ class Company  {
     this.customers = this.calculateCustomerInfo(orders);
   }
 
-
-
-
-
   returnAll() {
     console.log(this.orders);
     return this.orders;
@@ -49,7 +45,7 @@ class Company  {
 
   addNewOrder(customerName,customerAddress,itemName,price,currency) {
     const newOrder = {
-      oid:this.orders.length,
+      oid: '00' + this.orders.length,
       'Customer Name': customerName,
       'Customer Address':customerAddress,
       'Item Name':itemName,
