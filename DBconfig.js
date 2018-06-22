@@ -1,3 +1,4 @@
+'use strict';
 // ============ Import Dependencies =============>
 const Company = require('./utils/Company');
 const Orders = require('./utils/Orders.json');

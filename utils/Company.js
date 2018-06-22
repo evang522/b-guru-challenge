@@ -103,6 +103,11 @@ class Company  {
 
   //=================== Customer Operations ====================>
 
+
+
+
+  //================================== Get All Customers ====================>
+  
   getAllCustomers() {
     console.log(this.customers);
     return this.customers;
@@ -121,14 +126,17 @@ class Company  {
             'Address':order['Customer Address'],
             'orderCount':1,
             'totalPaid':Number(order['Price'])
-          }
+          };
         }
       }
-    })
+    });
 
     return customerDictionary;
   }
 
+
+  //================================== Update Customer List based on Product List ====================>
+  
   updateCustomerList() {
     this.customers = this.calculateCustomerInfo(this.orders);
   }
@@ -147,11 +155,11 @@ class Company  {
       if (customerUpdates[field]) {
         updates[field] = customerUpdates[field];
       }
-    })
+    });
     
     if (!Object.keys(updates).length) {
       const errMsg = 'No Valid updates Provided';
-      console.log(errMsg)
+      console.log(errMsg);
       return errMsg;
     }
 
@@ -161,7 +169,7 @@ class Company  {
       } else {
         return order;
       }
-    })
+    });
     this.updateCustomerList();
   }
 
@@ -169,32 +177,17 @@ class Company  {
   /**
    * 
    * @param {String} customerName 
-   * @description Searches orders by customer name, then 
+   *  
    */
   deleteCustomerInfo(customerName) {
     this.archivedCustomers.push(customerName);
     this.updateCustomerList();
   }
 
-  /**
-   * @param {String} customerName
-   * @description Searches through array of orders and returns a list of all orders by a specified customer name 
-   */
-  getAllOrdersByCustomer(customerName) {
 
-    if (!customerName || typeof customerName !== 'string') {
-      return 'Invalid or Missing customer name';
-    }
 
-    const orders = [];
-    this.orders.forEach(order => {
-      if (order['Customer Name'] === customerName) {
-        orders.push(order);
-      }
-    })
-    return orders;
-  }
-
+  //================================== Get Total Amount Paid By Customer ====================>
+  
   /**
    * 
    * @param {String} customerName 
@@ -211,7 +204,10 @@ class Company  {
 
   }
 
- /**
+
+  //================================== Get Customers By Item Name ====================>
+  
+  /**
   * 
   * @param {String} itemName 
   * @description Returns a list of customers that have bought an item with the provided name. The list items are in the form of objects. The 'customer' key contains the customer name. The 'purchaseFrequency' key lists the amount of times the customer has bought this item.
@@ -224,15 +220,15 @@ class Company  {
         customerList.push({
           'Customer Name':order['Customer Name'],
           purchaseFrequency:1
-        })
+        });
       } else if (customerList.find(customer => order['Customer Name'] === customer['Customer Name'])) {
         let item =  customerList.find(customer => {
-          return customer['Customer Name']=== order['Customer Name']
+          return customer['Customer Name']=== order['Customer Name'];
         });
         item['purchaseFrequency']++;
 
       }
-    })
+    });
 
     return customerList;
   }
